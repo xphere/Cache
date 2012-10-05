@@ -7,12 +7,13 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
- * Converts user-domain items into generic keys for the underlying storage
  */
 
 namespace BCC\Cache;
 
+/**
+ * Converts user-domain items into generic keys for the underlying storage
+ */
 interface StrategyInterface
 {
     function getKey($item);

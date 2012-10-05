@@ -7,12 +7,13 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
- * Returns specific item related to a key
  */
 
 namespace BCC\Cache;
 
+/**
+ * Returns specific item related to a key
+ */
 interface StorageInterface
 {
     /**
