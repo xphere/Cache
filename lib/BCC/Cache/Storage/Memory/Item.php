@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace xphere\Cache\Storage\Item;
+namespace BCC\Cache\Storage\Memory;
 
-use xphere\Cache\ItemInterface;
+use BCC\Cache\ItemInterface;
 
-class ArrayItem implements ItemInterface
+class Item implements ItemInterface
 {
     private $key;
     private $value;
@@ -51,7 +51,7 @@ class ArrayItem implements ItemInterface
     public function set($value, $ttl = null)
     {
         $this->value = $value;
-        $this->expires = $ttl ? time() + $ttl : null; 
+        $this->expires = $ttl ? time() + $ttl : null;
         return $this;
     }
 }
