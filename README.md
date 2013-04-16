@@ -1,7 +1,19 @@
 Berny\Cache
-=========
+===========
 
 This library provides a unified set of tools for common caching tasks.
+
+Features
+--------
+Moves from the classic cache interface to a item interface.
+
+Instalation
+-----------
+### From [composer/packagist](https://getcomposer.org)
+- Add `"berny/cache": "*@dev"` to your `composer.json` file
+
+### From [github](https://github.com)
+- [Download the code](https://github.com/xphere/Cache) into your project
 
 Storage
 -------
