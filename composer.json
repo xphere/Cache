@@ -1,0 +1,30 @@
+{
+    "name": "berny/cache",
+    "type": "library",
+    "description": "Unified set of tools for common caching tasks",
+    "keywords": [
+        "cache"
+    ],
+    "homepage": "https://github.com/xphere/Cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Berny Cantos",
+            "email": "be@rny.cc"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "suggest": {
+        "doctrine/cache": "Enables the DoctrineCache storage, with multiple additional backends"
+    },
+    "autoload": {
+        "psr-0": {
+            "BCC\\Cache": "lib"
+        }
+    },
+    "archive": {
+        "exclude": ["/", "!/lib", "!/LICENSE"]
+    }
+}
