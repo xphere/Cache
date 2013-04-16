@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the BCC\Cache package
+ * This file is part of the Berny\Cache package
  *
  * (c) Berny Cantos <be@rny.cc>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace BCC\Cache\Storage;
+namespace Berny\Cache\Storage;
 
 use ArrayObject;
-use BCC\Cache\StorageInterface;
+use Berny\Cache\StorageInterface;
 
 class ArrayStorage implements StorageInterface
 {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the BCC\Cache package
+ * This file is part of the Berny\Cache package
  *
  * (c) Berny Cantos <be@rny.cc>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BCC\Cache;
+namespace Berny\Cache;
 
 /**
  * Manipulations over a single item from a cache

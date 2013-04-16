@@ -1,4 +1,4 @@
-BCC\Cache
+Berny\Cache
 =========
 
 This library provides a unified set of tools for common caching tasks.

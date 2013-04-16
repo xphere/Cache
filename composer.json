@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-0": {
-            "BCC\\Cache": "lib"
+            "Berny\\Cache": "lib"
         }
     },
     "archive": {

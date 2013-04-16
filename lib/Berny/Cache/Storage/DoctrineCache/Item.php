@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the BCC\Cache package
+ * This file is part of the Berny\Cache package
  *
  * (c) Berny Cantos <be@rny.cc>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace BCC\Cache\Storage\DoctrineCache;
+namespace Berny\Cache\Storage\DoctrineCache;
 
-use BCC\Cache\ItemInterface;
+use Berny\Cache\ItemInterface;
 use Doctrine\Common\Cache\Cache;
 
 class Item implements ItemInterface

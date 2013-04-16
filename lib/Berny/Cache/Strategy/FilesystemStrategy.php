@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the BCC\Cache package
+ * This file is part of the Berny\Cache package
  *
  * (c) Berny Cantos <be@rny.cc>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace BCC\Cache\Strategy;
+namespace Berny\Cache\Strategy;
 
 use SplFileInfo;
-use BCC\Cache\StrategyInterface;
+use Berny\Cache\StrategyInterface;
 
 class FilesystemStrategy implements StrategyInterface
 {
