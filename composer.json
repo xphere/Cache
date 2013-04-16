@@ -21,10 +21,10 @@
     },
     "autoload": {
         "psr-0": {
-            "Berny\\Cache": "lib"
+            "Berny\\Cache": "src"
         }
     },
     "archive": {
-        "exclude": ["/", "!/lib", "!/LICENSE"]
+        "exclude": ["/", "!/src", "!/LICENSE"]
     }
 }
