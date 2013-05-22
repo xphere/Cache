@@ -21,18 +21,16 @@ class ArrayStorage implements StorageInterface
     public function __construct($storage = null)
     {
         if (!is_object($storage) || $storage instanceof ArrayAccess) {
-            $storage = new ArrayObject($storage ?: array());
-        }
-        foreach ((array)$storage as $key => $value) {
-            $this->storage[$key] = new Memory\Item($key, $value);
+            $this->storage = new ArrayObject($storage ?: array());
         }
     }
 
     public function getItem($key)
     {
-        if (!isset($this->storage[$key])) {
-            $this->storage[$key] = new ArrayItem($key);
+        $value = isset($this->storage[$key]) ? $this->storage[$key] : null;
+        if ($value instanceof Memory\Item) {
+            return $value;
         }
-        return $this->storage[$key];
+        return $this->storage[$key] = new Memory\Item($key, $value);
     }
 }
