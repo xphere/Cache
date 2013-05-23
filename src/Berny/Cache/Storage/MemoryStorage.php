@@ -14,7 +14,7 @@ namespace Berny\Cache\Storage;
 use ArrayObject;
 use Berny\Cache\StorageInterface;
 
-class ArrayStorage implements StorageInterface
+class MemoryStorage implements StorageInterface
 {
     private $storage;
 
