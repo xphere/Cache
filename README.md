@@ -3,6 +3,8 @@ Berny\Cache
 
 This library provides a unified set of tools for common caching tasks.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/119944e3-8364-4e13-86f9-c2b0ee9f5bfa/small.png)](https://insight.sensiolabs.com/projects/119944e3-8364-4e13-86f9-c2b0ee9f5bfa)
+
 Features
 --------
 Moves from the classic cache interface to a item interface.
