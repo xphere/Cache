@@ -11,6 +11,7 @@
 
 namespace Berny\Cache\Storage;
 
+use ArrayAccess;
 use ArrayObject;
 use Berny\Cache\StorageInterface;
 
