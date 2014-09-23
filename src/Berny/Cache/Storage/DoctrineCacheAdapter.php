@@ -25,6 +25,6 @@ class DoctrineCacheAdapter implements StorageInterface
 
     public function getItem($key)
     {
-        return new DoctrineCache\Item($cache, $key);
+        return new DoctrineCache\Item($this->cache, $key);
     }
 }
