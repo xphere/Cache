@@ -11,8 +11,6 @@
 
 namespace Berny\Cache\Storage;
 
-use ArrayAccess;
-use ArrayObject;
 use Berny\Cache\StorageInterface;
 
 /**
@@ -26,9 +24,11 @@ class MemoryStorage implements StorageInterface
 
     public function __construct($storage = null)
     {
-        if (!is_object($storage) || $storage instanceof ArrayAccess) {
-            $this->storage = new ArrayObject($storage ?: array());
+        if ($storage && !is_array($storage) && !$storage instanceof \ArrayAccess) {
+            throw new \DomainException('Memory storage must be an array or ArrayAccess');
         }
+
+        $this->storage = $storage ?: [];
     }
 
     public function getItem($key)
