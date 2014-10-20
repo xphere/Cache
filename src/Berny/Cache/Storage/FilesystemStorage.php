@@ -20,8 +20,8 @@ class FilesystemStorage implements StorageInterface
 
     public function __construct($path, $extension = null)
     {
-        $this->path = substr($path, -1) !== '/' ? $path . '/' : $path;
-        $this->extension = $extension;
+        $this->path = rtrim($path, '/') . '/';
+        $this->setExtension($extension);
     }
 
     public function getItem($key)
@@ -29,9 +29,17 @@ class FilesystemStorage implements StorageInterface
         return new Filesystem\Item($key, $this->locate($key), $this);
     }
 
+    public function setExtension($extension)
+    {
+        $this->extension = $extension ? '.' . ltrim('.', $extension) : '';
+
+        return $this;
+    }
+
     private function locate($key)
     {
         $hash = md5($key);
+
         return $this->path . substr($hash, 0, 4) . '/' . substr($hash, 4) . $this->extension;
     }
 }
