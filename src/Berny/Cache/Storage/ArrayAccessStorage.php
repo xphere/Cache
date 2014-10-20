@@ -11,14 +11,14 @@
 
 namespace Berny\Cache\Storage;
 
-use ArrayAccess;
 use Berny\Cache\StorageInterface;
 
 class ArrayAccessStorage implements StorageInterface
 {
+    /** @var \ArrayAccess */
     private $storage;
 
-    public function __construct(ArrayAccess $storage = null)
+    public function __construct(\ArrayAccess $storage = null)
     {
         $this->storage = $storage ?: array();
     }
