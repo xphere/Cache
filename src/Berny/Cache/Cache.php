@@ -31,22 +31,26 @@ class Cache
     public function getOrSet($key, $value, $ttl = null)
     {
         $item = $this->getItem($key);
-        if ($item->miss()) {
-            $item->set($value, $ttl);
-            return $value;
+        if (!$item->miss()) {
+            return $item->get();
         }
-        return $item->get();
+
+        $item->set($value, $ttl);
+
+        return $value;
     }
 
     public function getOrLazySet($key, \Closure $callback, $ttl = null)
     {
         $item = $this->getItem($key);
-        if ($item->miss()) {
-            $value = $callback();
-            $item->set($value, $ttl);
-            return $value;
+        if (!$item->miss()) {
+            return $item->get();
         }
-        return $item->get();
+
+        $value = $callback();
+        $item->set($value, $ttl);
+
+        return $value;
     }
 
     public function set($key, $value, $ttl = null)
