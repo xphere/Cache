@@ -45,6 +45,7 @@ class Item implements ItemInterface
     {
         $this->value = null;
         $this->expires = null;
+
         return $this;
     }
 
@@ -52,6 +53,7 @@ class Item implements ItemInterface
     {
         $this->value = $value;
         $this->expires = $ttl ? time() + $ttl : null;
+
         return $this;
     }
 }

@@ -11,10 +11,15 @@
 
 namespace Berny\Cache;
 
-/**
- * Converts user-domain items into generic keys for the underlying storage
- */
 interface StrategyInterface
 {
+    /**
+     * Converts user-domain items into generic keys for the underlying storage
+     *
+     * @api
+     * @param mixed $item
+     *
+     * @return mixed
+     */
     function getKey($item);
 }

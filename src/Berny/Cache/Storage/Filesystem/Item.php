@@ -38,6 +38,7 @@ class Item implements ItemInterface
     public function miss()
     {
         $info = $this->fileInfo();
+
         return !$info->isFile() || $info->getMTime() < time();
     }
 
@@ -66,6 +67,7 @@ class Item implements ItemInterface
         if (is_string($this->filename)) {
             $this->filename = new SplFileInfo($this->filename);
         }
+
         return $this->filename;
     }
 }

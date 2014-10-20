@@ -14,6 +14,9 @@ namespace Berny\Cache\Storage;
 use Berny\Cache\StorageInterface;
 use Doctrine\Common\Cache\Cache;
 
+/**
+ * Cache for Doctrine\Cache integration
+ */
 class DoctrineCacheAdapter implements StorageInterface
 {
     private $cache;

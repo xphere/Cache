@@ -46,12 +46,14 @@ class Item implements ItemInterface
     public function remove()
     {
         $this->cache->delete($this->key);
+
         return $this;
     }
 
     public function set($value, $ttl = null)
     {
         $this->cache->save($this->key, $value, $ttl);
+
         return $this;
     }
 }

@@ -11,13 +11,15 @@
 
 namespace Berny\Cache;
 
-/**
- * Returns specific item related to a key
- */
 interface StorageInterface
 {
     /**
-     * @var ItemInterface
+     * Returns specific item related to a key
+     *
+     * @api
+     * @param mixed $key
+     *
+     * @return ItemInterface
      */
     function getItem($key);
 }

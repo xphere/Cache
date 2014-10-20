@@ -13,6 +13,9 @@ namespace Berny\Cache\Storage;
 
 use Berny\Cache\StorageInterface;
 
+/**
+ * Cache stored in filesystem
+ */
 class FilesystemStorage implements StorageInterface
 {
     private $path;

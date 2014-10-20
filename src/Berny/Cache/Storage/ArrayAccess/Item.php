@@ -42,6 +42,7 @@ class Item implements ItemInterface
     public function remove()
     {
         unset($this->array[$this->key]);
+
         return $this;
     }
 

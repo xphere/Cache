@@ -15,8 +15,13 @@ use ArrayAccess;
 use ArrayObject;
 use Berny\Cache\StorageInterface;
 
+/**
+ * Cache stored in memory array
+ * Allows any implementation of ArrayAccess
+ */
 class MemoryStorage implements StorageInterface
 {
+    /** @var Memory\Item[] */
     private $storage;
 
     public function __construct($storage = null)
@@ -32,6 +37,7 @@ class MemoryStorage implements StorageInterface
         if ($value instanceof Memory\Item) {
             return $value;
         }
+
         return $this->storage[$key] = new Memory\Item($key, $value);
     }
 }
